@@ -33,6 +33,10 @@
   --gray10: #616161;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
@@ -48,6 +52,15 @@ header{
   /* --gray10: red; para cambiar el valor de una variable  */
   font-size: 14px;
   color: var(--gray10);
+  width: 188px;
+  position: absolute;
+  top: 64px;
+  left: -232px;
+
+}
+
+header li{
+  margin-bottom: 16px;
 }
 
 header a{
@@ -61,11 +74,13 @@ header a:hover{
 
 nav details summary{
   font-weight: bold;
+  line-height: 24px;
 }
 h1{
   font-size: 60px;
   margin-top: 64px;
   margin-bottom: 16px;
+  font-weight: normal;
 
 }
 
@@ -81,6 +96,9 @@ h3{
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: sticky;
+  top: 0;
+  background: white;
 }
 
 pre{
@@ -104,6 +122,30 @@ blockquote span{
 
 blockquote span::before{
   content: '-';
+}
+
+.header{
+  /* border: 1px solid red; */
+  position: sticky;
+  top: 0;
+}
+
+.header-content{
+  position: relative;
+
+}
+/* .main{
+  background-image: linear-gradient(to top, rgba(255,255,255, .3), transparent), url(../images/patron-1.png);
+} */
+
+.wrapper{
+  width: 902px;
+  margin: auto;
+}
+
+.main-content{
+  background: white;
+  /* padding: 20px; */
 }
 
 .hero{
@@ -142,7 +184,7 @@ blockquote span::before{
 
 .section-content h3{
   counter-increment: titleList;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
 .section-content h3::before{
@@ -151,9 +193,12 @@ blockquote span::before{
 
 .section-content h3::after{
   content: '';
-  width: 32px;
+  width: 80px;
   height: 4px;
   background: var(--gray30);
   display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 
 }
